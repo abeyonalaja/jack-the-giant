@@ -33,13 +33,15 @@ public class Player : MonoBehaviour {
 		float h = Input.GetAxisRaw("Horizontal");
 		
 		if(h > 0) {
+			playerAnimatior.SetBool("Walk", true);
 			if(vel < maxVelocity)
 				forceX = speed;
 		} else if(h < 0) {
+			playerAnimatior.SetBool("Walk", true);
 			if(vel < maxVelocity)
 				forceX = -speed;
 		} else {
-			
+			playerAnimatior.SetBool("Walk", false);
 		}
 		
 		playerBody.AddForce(new Vector2(forceX, 0) );
