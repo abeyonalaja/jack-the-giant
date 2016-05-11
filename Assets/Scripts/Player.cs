@@ -34,10 +34,16 @@ public class Player : MonoBehaviour {
 		
 		if(h > 0) {
 			playerAnimatior.SetBool("Walk", true);
+			Vector3 temp = transform.localScale;
+			temp.x = 1.3f;
+			transform.localScale = temp;
 			if(vel < maxVelocity)
 				forceX = speed;
 		} else if(h < 0) {
 			playerAnimatior.SetBool("Walk", true);
+			Vector3 temp = transform.localScale;
+			temp.x = -1.3f;
+			transform.localScale = temp;
 			if(vel < maxVelocity)
 				forceX = -speed;
 		} else {
