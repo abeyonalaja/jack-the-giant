@@ -3,6 +3,22 @@ using System.Collections;
 
 public class CloudSpawner : MonoBehaviour {
 
+	[SerializeField]
+	private GameObject[] clouds;
+	
+	private float distanceBetweenClouds = 3f;
+	
+	private float minX;
+	private float maxX;
+	
+	private float lastCloudPositionY;
+	
+	private float controlX;
+	
+	[SerializeField]
+	private GameObject[] collectables;
+	
+	private GameObject player;
 	// Use this for initialization
 	void Start () {
 	
