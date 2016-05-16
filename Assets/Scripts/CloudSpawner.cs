@@ -21,9 +21,13 @@ public class CloudSpawner : MonoBehaviour {
 	private GameObject player;
 	// Use this for initialization
 	void Awake () {
+		player = GameObject.Find("Player");
 		controlX = 0;
 		SetMinAndMaxX();
-		CreageClouds();
+		CreateClouds();
+		PositionThePlayer();
+		
+		
 	}
 	
 	void SetMinAndMaxX(){
@@ -42,7 +46,7 @@ public class CloudSpawner : MonoBehaviour {
 		}
 	}
 	
-	void CreageClouds() {
+	void CreateClouds() {
 		Shuffle(clouds);
 		
 		float positionY = 0f;
@@ -50,7 +54,7 @@ public class CloudSpawner : MonoBehaviour {
 		for(int i = 0; i< clouds.Length; i++){
 			Vector3 temp = clouds[i].transform.position;
 			temp.y = positionY;
-			temp.x = Random.Range(minX, maxX);
+			//temp.x = Random.Range(minX, maxX);
 			
 			if(controlX == 0){
 				temp.x = Random.Range(0.0f, maxX);
@@ -85,6 +89,19 @@ public class CloudSpawner : MonoBehaviour {
 															   cloudsInGame[0].transform.position.z);
 				cloudsInGame[0].transform.position = tempPosition;
 			}
+			
+			
 		}
+		Vector3 topCloudInGamePosition = cloudsInGame[0].transform.position;
+		
+		// get the highest cloud
+		for(int i = 1; i < cloudsInGame.Length; i++) {
+			if(topCloudInGamePosition.y < cloudsInGame[i].transform.position.y) {
+				topCloudInGamePosition = cloudsInGame[i].transform.position;
+			}
+		}
+		
+		topCloudInGamePosition.y += 0.8f;
+		player.transform.position = topCloudInGamePosition;
 	}
 }
