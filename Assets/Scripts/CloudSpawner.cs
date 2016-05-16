@@ -71,4 +71,20 @@ public class CloudSpawner : MonoBehaviour {
 			positionY -= distanceBetweenClouds;
 		}
 	}
+	
+	void PositionThePlayer() {
+		GameObject[] darkClouds = GameObject.FindGameObjectsWithTag("Deadly");
+		GameObject[] cloudsInGame = GameObject.FindGameObjectsWithTag("Cloud");
+		
+		for(int i =0; i < darkClouds.Length; i++) {
+			if(darkClouds[i].transform.position.y == 0){
+				Vector3 tempPosition = darkClouds[i].transform.position;
+				
+				darkClouds[i].transform.position = new Vector3(cloudsInGame[0].transform.position.x,
+															   cloudsInGame[0].transform.position.y,
+															   cloudsInGame[0].transform.position.z);
+				cloudsInGame[0].transform.position = tempPosition;
+			}
+		}
+	}
 }
