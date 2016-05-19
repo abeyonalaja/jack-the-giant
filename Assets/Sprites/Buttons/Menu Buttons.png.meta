@@ -1,9 +1,15 @@
 fileFormatVersion: 2
 guid: 2267de55b08ad481d88e1754e3152872
-timeCreated: 1462488438
+timeCreated: 1463660455
 licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: StartGameButton
+    21300002: HighScoreButton
+    21300004: OptionsButton
+    21300006: QuitButton
+    21300008: MusicOffButton
+    21300010: MusicOnButton
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -38,7 +44,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +55,110 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: StartGameButton
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 207
+        width: 204
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -102, y: 24.5}
+        - {x: -102, y: -24.5}
+        - {x: 102, y: -24.5}
+        - {x: 102, y: 20.5}
+        - {x: 101, y: 24.5}
+    - name: HighScoreButton
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 156
+        width: 204
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -102, y: 25}
+        - {x: -102, y: -23}
+        - {x: -97, y: -25}
+        - {x: 102, y: -25}
+        - {x: 102, y: 25}
+    - name: OptionsButton
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 105
+        width: 204
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -102, y: 25}
+        - {x: -102, y: -25}
+        - {x: 102, y: -25}
+        - {x: 102, y: 25}
+    - name: QuitButton
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 54
+        width: 204
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 93, y: 24.5}
+        - {x: -95, y: 24.5}
+        - {x: -102, y: 15.5}
+        - {x: -102, y: -18.5}
+        - {x: -93, y: -24.5}
+        - {x: 92, y: -24.5}
+        - {x: 102, y: -18.5}
+        - {x: 102, y: 16.5}
+        - {x: 95, y: 23.5}
+    - name: MusicOffButton
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26.5, y: 26.5}
+        - {x: -26.5, y: -16.5}
+        - {x: -16.5, y: -26.5}
+        - {x: 16.5, y: -26.5}
+        - {x: 26.5, y: -21.5}
+        - {x: 26.5, y: 26.5}
+    - name: MusicOnButton
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1
+        width: 53
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21.5, y: 25.5}
+        - {x: -26.5, y: 18.5}
+        - {x: -26.5, y: -16.5}
+        - {x: -16.5, y: -25.5}
+        - {x: 16.5, y: -25.5}
+        - {x: 26.5, y: -18.5}
+        - {x: 26.5, y: 18.5}
+        - {x: 21.5, y: 25.5}
     outline: []
   spritePackingTag: 
   userData: 
