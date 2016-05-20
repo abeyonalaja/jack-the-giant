@@ -49,5 +49,18 @@ public class PlayerScore : MonoBehaviour {
 			AudioSource.PlayClipAtPoint(coinClip, transform.position);
 			target.gameObject.SetActive(false);
 		}
+		
+		if(target.tag == "Life"){
+			lifeScore++;
+			scoreCount += 300;
+			
+			AudioSource.PlayClipAtPoint(lifeClip, transform.position);
+			target.gameObject.SetActive(false);
+		}
+		
+		if(target.tag == "Bounds"){
+			cameraController.moveCamera = false;
+			countScore = false;
+		}
 	}
 }
