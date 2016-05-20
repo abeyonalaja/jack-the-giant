@@ -14,8 +14,8 @@ public class PlayerScore : MonoBehaviour {
 	private bool countScore;
 	
 	public static int scoreCount;
-	public static int lifeScore;
-	public static int coinScore;
+	public static int lifeCount;
+	public static int coinCount;
 
 	void Awake() {
 		cameraController = Camera.main.GetComponent<CameraController>();
@@ -43,7 +43,7 @@ public class PlayerScore : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D target) {
 		
 		if(target.tag == "Coin") {
-			coinScore++;
+			coinCount++;
 			scoreCount += 200;
 			
 			AudioSource.PlayClipAtPoint(coinClip, transform.position);
@@ -51,7 +51,7 @@ public class PlayerScore : MonoBehaviour {
 		}
 		
 		if(target.tag == "Life"){
-			lifeScore++;
+			lifeCount++;
 			scoreCount += 300;
 			
 			AudioSource.PlayClipAtPoint(lifeClip, transform.position);
@@ -61,6 +61,8 @@ public class PlayerScore : MonoBehaviour {
 		if(target.tag == "Bounds"){
 			cameraController.moveCamera = false;
 			countScore = false;
+			
+			lifeCount--;
 		}
 	}
 }
