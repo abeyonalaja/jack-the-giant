@@ -63,6 +63,16 @@ public class PlayerScore : MonoBehaviour {
 			countScore = false;
 			
 			lifeCount--;
+			transform.position = new Vector3(500, 500, 0);
+		}
+		
+		if(target.tag == "Deadly") {
+			Debug.Log("GRRRR DEADLY");
+			cameraController.moveCamera = false;
+			countScore = false;
+			
+			lifeCount--;
+			transform.position = new Vector3(500, 500, 0);
 		}
 	}
 }
