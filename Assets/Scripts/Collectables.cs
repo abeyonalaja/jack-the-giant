@@ -3,13 +3,11 @@ using System.Collections;
 
 public class Collectables : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+	void OnEnable(){
+		Invoke("DestroyCollectable", 6f);
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	void DestroyCollectable() {
+		gameObject.SetActive(false);	
 	}
 }
