@@ -28,7 +28,7 @@ public class PlayerScore : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		CountScore();
 	}
 	
 	void CountScore() {
@@ -37,6 +37,17 @@ public class PlayerScore : MonoBehaviour {
 				scoreCount++;
 			}
 			previuosPosition = transform.position;
+		}
+	}
+	
+	void OnTriggerEnter2D(Collider2D target) {
+		
+		if(target.tag == "Coin") {
+			coinScore++;
+			scoreCount += 200;
+			
+			AudioSource.PlayClipAtPoint(coinClip, transform.position);
+			target.gameObject.SetActive(false);
 		}
 	}
 }
