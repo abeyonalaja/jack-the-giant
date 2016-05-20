@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class OptionsController : MonoBehaviour {
 
@@ -8,8 +9,7 @@ public class OptionsController : MonoBehaviour {
 	
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	public void OnBackButtonClick() {
+		SceneManager.LoadScene("MainMenu");
 	}
 }
