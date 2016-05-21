@@ -3,6 +3,8 @@ using System.Collections;
 
 public class GamePlayController : MonoBehaviour {
 	
+	[SerializeField]
+	private GameObject pausePanel;
 	public static GamePlayController instance;
 
 	void GetInstance() {
@@ -14,13 +16,9 @@ public class GamePlayController : MonoBehaviour {
 	void Awake() {
 		GetInstance();
 	}
-	// Use this for initialization
-	void Start () {
 	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	public void PauseGame() {
+		Time.timeScale = 0f;
+		pausePanel.SetActive(true);
 	}
 }
