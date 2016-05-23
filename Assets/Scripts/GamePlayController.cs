@@ -44,15 +44,15 @@ public class GamePlayController : MonoBehaviour {
 		SceneManager.LoadScene("MainMenu");
 	}
 	
-	void SetScore(int score) {
+	public void SetScore(int score) {
 		scoreText.text = "x" + score;
 	}
 	
-	void SetCoinScore(int coinScore){
+	public void SetCoinScore(int coinScore){
 		coinText.text = "x" + coinScore;
 	}
 	
-	void setLifeScore(int lifeScore){
+	public void setLifeScore(int lifeScore){
 		lifeText.text = "x" + lifeScore;
 	}
 }

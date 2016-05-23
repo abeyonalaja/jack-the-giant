@@ -19,10 +19,13 @@ public class PlayerScore : MonoBehaviour {
 
 	void Awake() {
 		cameraController = Camera.main.GetComponent<CameraController>();
+		
 	}
 	// Use this for initialization
 	void Start () {
 		previuosPosition = transform.position;
+	GamePlayController.instance.SetCoinScore(0);
+		GamePlayController.instance.SetScore(0);
 		countScore = true;
 	}
 	
@@ -37,6 +40,8 @@ public class PlayerScore : MonoBehaviour {
 				scoreCount++;
 			}
 			previuosPosition = transform.position;
+			GamePlayController.instance.SetScore(scoreCount);
+			
 		}
 	}
 	
@@ -46,6 +51,9 @@ public class PlayerScore : MonoBehaviour {
 			coinCount++;
 			scoreCount += 200;
 			
+			GamePlayController.instance.SetScore(scoreCount);
+			GamePlayController.instance.SetCoinScore(coinCount);
+			
 			AudioSource.PlayClipAtPoint(coinClip, transform.position);
 			target.gameObject.SetActive(false);
 		}
@@ -53,6 +61,9 @@ public class PlayerScore : MonoBehaviour {
 		if(target.tag == "Life"){
 			lifeCount++;
 			scoreCount += 300;
+			
+			GamePlayController.instance.SetScore(scoreCount);
+			GamePlayController.instance.setLifeScore(lifeCount);
 			
 			AudioSource.PlayClipAtPoint(lifeClip, transform.position);
 			target.gameObject.SetActive(false);
