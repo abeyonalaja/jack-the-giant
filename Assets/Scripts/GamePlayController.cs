@@ -18,8 +18,6 @@ public class GamePlayController : MonoBehaviour {
 	[SerializeField]
 	private Text lifeText;
 	
-	[SerializeField]
-	private GameObject pausePanel;
 
 	void GetInstance() {
 		if(instance == null) {
