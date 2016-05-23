@@ -1,12 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GamePlayController : MonoBehaviour {
 	
 	[SerializeField]
 	private GameObject pausePanel;
 	public static GamePlayController instance;
+	
+	[SerializeField]
+	private Text scoreText;
+	
+	[SerializeField]
+	private Text coinText;
+	
+	[SerializeField]
+	private Text lifeText;
+	
+	[SerializeField]
+	private GameObject pausePanel;
 
 	void GetInstance() {
 		if(instance == null) {
