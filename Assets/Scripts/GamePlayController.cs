@@ -43,4 +43,16 @@ public class GamePlayController : MonoBehaviour {
 		Time.timeScale = 1f;
 		SceneManager.LoadScene("MainMenu");
 	}
+	
+	void SetScore(int score) {
+		scoreText.text = "x" + score;
+	}
+	
+	void SetCoinScore(int coinScore){
+		coinText.text = "x" + coinScore;
+	}
+	
+	void setLifeScore(int lifeScore){
+		lifeText.text = "x" + lifeScore;
+	}
 }
