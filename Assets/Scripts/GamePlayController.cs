@@ -34,6 +34,12 @@ public class GamePlayController : MonoBehaviour {
 		}
 	}
 	
+	public void GameOverShowPanel(int finaleScore, int finaleCoinScore) {
+		gameOverPanel.SetActive(true);
+		gameOverScoreText.text = finaleScore.ToString();
+		gameOverCoinText.text = finaleCoinScore.ToString();
+	}
+	
 	void Awake() {
 		GetInstance();
 	}
