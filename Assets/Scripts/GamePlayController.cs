@@ -38,6 +38,12 @@ public class GamePlayController : MonoBehaviour {
 		gameOverPanel.SetActive(true);
 		gameOverScoreText.text = finaleScore.ToString();
 		gameOverCoinText.text = finaleCoinScore.ToString();
+		StartCoroutine(GameOverLoadMainMenu());
+	}
+	
+	IEnumerator GameOverLoadMainMenu() {
+		yield return new WaitForSeconds(3f);
+		Application.LoadLevel("MainMenu");
 	}
 	
 	void Awake() {

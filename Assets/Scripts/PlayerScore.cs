@@ -75,6 +75,8 @@ public class PlayerScore : MonoBehaviour {
 			
 			lifeCount--;
 			transform.position = new Vector3(500, 500, 0);
+			
+			GamePlayController.instance.GameOverShowPanel(scoreCount, coinCount);
 		}
 		
 		if(target.tag == "Deadly") {
