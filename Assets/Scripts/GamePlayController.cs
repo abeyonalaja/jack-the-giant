@@ -7,6 +7,9 @@ public class GamePlayController : MonoBehaviour {
 	
 	[SerializeField]
 	private GameObject pausePanel;
+	
+	[SerializeField]
+	private GameObject gameOverPanel;
 	public static GamePlayController instance;
 	
 	[SerializeField]
@@ -17,6 +20,12 @@ public class GamePlayController : MonoBehaviour {
 	
 	[SerializeField]
 	private Text lifeText;
+	
+	[SerializeField]
+	private Text gameOverScoreText;
+	
+	[SerializeField]
+	private Text gameOverCoinText;
 	
 
 	void GetInstance() {
